@@ -27,6 +27,13 @@ use vertice;
 
 CREATE TABLE accounts( id text,  name text, phone text, email text,  api_key text, password text, states text, approval text, suspend text, registration_ip_address text, dates text, PRIMARY KEY (email));
 
+-- 3. Add account and give Administrator Permission for User Interface.
+
+INSERT INTO vertice.accounts
+(email, api_key, approval, dates, id, name, password, phone, registration_ip_address, states, suspend)
+VALUES('admin', 'c593f89e7023f1b765d31e93b20e7af56856ec0d', '{"approved":"true","approved_by_id":null,"approved_at":null}', '{"last_posted_at":null,"last_emailed_at":null,"previous_visit_at":null,"first_seen_at":null,"created_at":"2017-10-23 14:15:07 +0000"}', 'ACT8409766358958382828', '{"first_name":"Super","last_name":"Admin"}', '{"password_hash":"2000:VQycXwJjC38e1RINmncgd51K_o58hjuvnGrZnemcpII=:YOLDNbqzm1lBKITA4IqXyw==","password_reset_key":"","password_reset_sent_at":""}', '{"phone":"0000000000","phone_verified":null}', '', '{"authority":"admin","active":"true","blocked":null,"staged":"false"}', '{"suspended":null,"suspended_at":null,"suspended_till":null}');
+
+
 CREATE TABLE assemblies (id text, org_id text, name text, assemblies list<text>, inputs list<text>, json_claz text, created_at timestamp, PRIMARY KEY ((org_id),created_at, id));
 
 CREATE TABLE assembly (id text, org_id text, account_id text, name text, components list<text>, tosca_type text, policies list<text>, inputs list<text>, outputs list<text>, status text, state text, json_claz text, created_at timestamp, PRIMARY KEY ((org_id),created_at, id));
