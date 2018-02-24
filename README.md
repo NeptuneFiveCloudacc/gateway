@@ -181,7 +181,7 @@ As this is heavy on memory, we have a work in progress 2.0 code which is based o
 
 # Documentation
 
-For [documentation] (http://docs.virtengine.com)  [devkit] (https://github.com/megamsys/vertice_dev_kit)
+For [documentation] (http://docs.virtengine.com)  [devkit] (https://github.com/VirtEngine/verticedev)
 
 # License
 
@@ -190,4 +190,4 @@ MIT
 
 # Authors
 
-VirtEngine Humans <hello@virtengine.com>
+VirtEngine Admins <hello@virtengine.com>
